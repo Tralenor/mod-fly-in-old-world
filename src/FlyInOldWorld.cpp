@@ -15,7 +15,7 @@ class FlyInOldWorld : public PlayerScript
 public:
     FlyInOldWorld() : PlayerScript("FlyInOldWorld") { }
 
-    bool OnCanPlayerFlyInZone(const Player* player, uint32 mapId, uint32 zoneId, SpellInfo const* bySpell) override
+    bool OnCanPlayerFlyInZone(Player* player, uint32 mapId, uint32 zoneId, SpellInfo const* bySpell) override
     {
         player->GetSession()->SendAreaTriggerMessage("%s", "Hook executed");
         uint32 v_map = GetVirtualMapForMapAndZone(mapId, zoneId);
