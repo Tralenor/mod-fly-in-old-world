@@ -15,7 +15,7 @@ class FlyInOldWorld : public PlayerScript
 public:
     FlyInOldWorld() : PlayerScript("FlyInOldWorld") { }
 
-    bool OnCanPlayerFlyInZone(Player* player, uint32 mapId, uint32 zoneId, SpellInfo const* bySpell) override
+    bool OnPlayerCanFlyInZone(Player* player, uint32 mapId, uint32 zoneId, SpellInfo const* bySpell) override
     {
         uint32 v_map = GetVirtualMapForMapAndZone(mapId, zoneId);
         if (v_map == 0 || v_map == 1)
